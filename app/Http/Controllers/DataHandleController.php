@@ -28,4 +28,13 @@ class DataHandleController extends Controller
         $data = $request ->all();
         return view('form-success', $data);
     }
+
+    public function returnForm() {
+        return view('admin.template.form');
+    }
+
+    public function returnLayout() {
+        return view('admin.template.layout');
+    }
+
 }
