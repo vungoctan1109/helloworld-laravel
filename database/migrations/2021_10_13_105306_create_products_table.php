@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->integer('id')->autoIncrement();
             $table->double('price');
             $table->string('name');
+            $table->timestamps();
         });
     }
 

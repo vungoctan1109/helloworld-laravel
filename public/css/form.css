@@ -240,13 +240,13 @@
 }
 .rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
   color: #03a9f4;
-} 
+}
 .rating > input:checked + label:hover, .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label {
   color: #03a9f4;
 }
 
-/****** Order Details *****/
+/****** OrderSeeder Details *****/
 .interested-input-area, .budget-input-area{
 	margin-right:15px;
 }
@@ -288,7 +288,7 @@
 	font-size: 15px;
 	line-height: 27px;
 }
-.ui-datepicker-prev, 
+.ui-datepicker-prev,
 .ui-datepicker-next {
 	position: absolute;
 	top: 0;
@@ -324,7 +324,7 @@
 }
 .ui-datepicker-calendar a:hover {
 	background: rgba(0,0,0,.05);
-	color:#303030;	
+	color:#303030;
 }
 .ui-datepicker-calendar span {
 	color: #fff;
@@ -335,7 +335,7 @@
 }
 .ui-datepicker-calendar .ui-state-active {
 	background: rgba(0,0,0,.05);
-	cursor: default;	
+	cursor: default;
 }
 .ui-datepicker-inline {
 	border: 2px solid #e5e5e5;

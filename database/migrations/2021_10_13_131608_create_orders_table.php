@@ -16,8 +16,8 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->date('created_at')->default(Carbon::now());
             $table->integer('customer_id');
+            $table->timestamps();
             $table->foreign('customer_id')->references('id')->on('customers');
         });
     }

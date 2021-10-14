@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('name');
             $table->string('address');
+            $table->timestamps();
         });
     }
 

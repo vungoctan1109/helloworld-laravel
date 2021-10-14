@@ -18,7 +18,8 @@ class CreateOrderDetailsTable extends Migration
             $table->integer('product_id');
             $table->integer('quantity');
             $table->double('amount');
-            $table->primary('order_id', 'product_id');
+            $table->timestamps();
+            $table->primary(['order_id', 'product_id']);
             $table->foreign('order_id')->references('id')->on('orders');
             $table->foreign('product_id')->references('id')->on('products');
         });
