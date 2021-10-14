@@ -30,6 +30,10 @@ Route::post('/data-handle/form',[DataHandleController::class, 'processForm']);
 
 Route::get('/layout',[AdminController::class, 'returnLayout']);
 Route::get('/layout/form',[AdminController::class, 'returnForm']);
-Route::get('/layout/table',[AdminController::class, 'returnTable']);
 
+Route::post('/layout/form',[AdminController::class, 'storeEvent']);
+Route::get('/layout/table',[AdminController::class, 'showAll']);
 
+Route::get('/layout/update/{eventName}', [AdminController::class, 'edit']);
+Route::post('/layout/update/{eventName}', [AdminController::class, 'update']);
+Route::get('/layout/delete/{eventName}', [AdminController::class, 'delete']);

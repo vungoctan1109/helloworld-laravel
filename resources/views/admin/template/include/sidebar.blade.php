@@ -7,15 +7,10 @@
         <nav class="sidebar-nav left-sidebar-menu-pro">
             <ul class="metismenu" id="menu1">
                 <li class="active">
-                    <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Forms</span></a>
+                    <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Event Manage</span></a>
                     <ul class="submenu-angle" aria-expanded="false">
-                        <li><a title="Add Professor" href="/layout/form"><span class="mini-sub-pro">Form Page</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Tables</span></a>
-                    <ul class="submenu-angle" aria-expanded="false">
-                        <li><a title="Departments List" href="/layout/table"><span class="mini-sub-pro">Table Page</span></a></li>
+                        <li><a title="Add Event" href="/layout/form"><span class="mini-sub-pro">Add Event</span></a></li>
+                        <li><a title="Departments List" href="/layout/table"><span class="mini-sub-pro">List Event</span></a></li>
                     </ul>
                 </li>
             </ul>

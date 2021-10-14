@@ -22,33 +22,51 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="review-content-section">
                                             <div id="dropzone1" class="pro-ad">
-                                                <form action="/layout/form" method="post" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
-                                                    @csrf
+                                                <form action="/layout/update/{{ $event->eventName }}" method="post" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
+                                                   @csrf
                                                     <div class="row">
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
-                                                                <input name="eventName" type="text" class="form-control" placeholder="Event Name">
+                                                                <input name="eventName" type="text" class="form-control" value="{{ $event->eventName }}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="bandNames" type="text" class="form-control" placeholder="Band Names">
+                                                                <input name="bandNames" type="text" class="form-control" value="{{ $event->bandNames }}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="startDate" id="finish1" type="text" class="form-control" placeholder="Start Date">
+                                                                <input name="startDate" id="finish1" type="text" class="form-control" value="{{ $event->startDate }}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="endDate" id="finish2" type="text" class="form-control" placeholder="End Date">
+                                                                <input name="endDate" id="finish2" type="text" class="form-control" value="{{ $event->endDate }}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="portfolio" type="text" class="form-control" placeholder="Portfolio">
+                                                                <input name="portfolio" type="text" class="form-control" value="{{ $event->portfolio }}">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
-                                                                <input name="ticketPrice" type="number" class="form-control" placeholder="Ticket Price">
+                                                                <input name="ticketPrice" type="number" class="form-control" value="{{ $event->ticketPrice }}">
                                                             </div>
                                                             <div class="form-group res-mg-t-15">
                                                                 <select name="status" class="form-control">
-                                                                    <option value="none" selected disabled>Select Status</option>
+                                                                    <option value="{{ $event->status }}" selected>
+                                                                        @switch($event->status)
+                                                                            @case(1)
+                                                                            Đang diễn ra
+                                                                            @break
+                                                                            @case(2)
+                                                                            Sắp diễn ra
+                                                                            @break
+                                                                            @case(3)
+                                                                            Đã diễn ra
+                                                                            @break
+                                                                            @case(0)
+                                                                            Tạm hoãn
+                                                                            @break
+                                                                            @default
+                                                                            <p>Default</p>
+                                                                            @break
+                                                                        @endswitch
+                                                                    </option>
                                                                     <option value="1">Đang diễn ra</option>
                                                                     <option value="2"> Sắp diễn ra</option>
                                                                     <option value="3">Đã diễn ra</option>
@@ -60,7 +78,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-12">
                                                             <div class="payment-adress">
-                                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -77,5 +95,6 @@
         </div>
     </div>
 @endsection
+
 
 

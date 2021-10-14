@@ -33,7 +33,6 @@
 		minViewMode: 1,
 		keyboardNavigation: false,
 		forceParse: false,
-		forceParse: false,
 		autoclose: true,
 		todayHighlight: true
 	});
