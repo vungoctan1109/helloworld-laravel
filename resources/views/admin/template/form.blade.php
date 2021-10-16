@@ -24,27 +24,54 @@
                                             <div id="dropzone1" class="pro-ad">
                                                 <form action="/layout/form" method="post" class="dropzone dropzone-custom needsclick add-professors" id="demo1-upload">
                                                     @csrf
+                                                    @if ($errors->any())
+                                                        <div class="alert alert-danger">
+                                                            <ul>
+                                                                @foreach ($errors->all() as $error)
+                                                                    <li>{{ $error }}</li>
+                                                                @endforeach
+                                                            </ul>
+                                                        </div>
+                                                    @endif
                                                     <div class="row">
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
                                                                 <input name="eventName" type="text" class="form-control" placeholder="Event Name">
+                                                                @error('eventName')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                             <div class="form-group">
                                                                 <input name="bandNames" type="text" class="form-control" placeholder="Band Names">
+                                                                @error('bandNames')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                             <div class="form-group">
                                                                 <input name="startDate" id="finish1" type="text" class="form-control" placeholder="Start Date">
+                                                                @error('startDate')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                             <div class="form-group">
                                                                 <input name="endDate" id="finish2" type="text" class="form-control" placeholder="End Date">
+                                                                @error('endDate')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                             <div class="form-group">
                                                                 <input name="portfolio" type="text" class="form-control" placeholder="Portfolio">
+                                                                @error('portfolio')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
                                                                 <input name="ticketPrice" type="number" class="form-control" placeholder="Ticket Price">
+                                                                @error('ticketPrice')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                             <div class="form-group res-mg-t-15">
                                                                 <select name="status" class="form-control">
@@ -54,6 +81,9 @@
                                                                     <option value="3">Đã diễn ra</option>
                                                                     <option value="0">Tạm hoãn</option>
                                                                 </select>
+                                                                @error('status')
+                                                                <div class="text-danger">* {{ $message }}</div>
+                                                                @enderror
                                                             </div>
                                                         </div>
                                                     </div>

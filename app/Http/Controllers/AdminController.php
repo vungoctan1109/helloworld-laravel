@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +26,7 @@ class AdminController extends Controller
     }
 
 
-    public function storeEvent(Request $request)
+    public function storeEvent(StoreEventRequest $request)
     {
         $data = $request->all();
         Event::create($data);

@@ -17,6 +17,6 @@ class Event extends Model
         'endDate',
         'portfolio',
         'ticketPrice',
-        'status',
+        'status'
     ];
 }
