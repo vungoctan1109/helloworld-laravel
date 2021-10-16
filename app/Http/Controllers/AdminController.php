@@ -48,13 +48,14 @@ class AdminController extends Controller
 
     public function showAll()
     {
-        $events = Event::all();
+        $events = Event::where('status', '!=', '0') -> get();
         return view('admin.template.table', compact('events'));
     }
 
     public function delete($eventName)
     {
-        $event = DB::table('events')->where('eventName', '=', $eventName)->delete();
+        $event = Event::where('eventName', $eventName);
+        $event->update(['status' => '0']);
         echo "Success delete event";
     }
 
